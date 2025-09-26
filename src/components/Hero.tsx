@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-0 pt-9 md:pt-16 pb-8 ">
         {/* Heading */}
         <h1 className="text-4xl max-w-sm md:text-7xl font-bold text-gray-900 mb-10">
-          Find An Experience
+          Find An <br /> Experience
         </h1>
 
         {/* Paragraph */}

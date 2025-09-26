@@ -95,7 +95,12 @@ const Gallery: React.FC = () => {
             onClick={() => toggleCheck(9)}
           />
         </div>
+      <button className="px-15 my-10 py-2 bg-[#FF5200] text-white flex items-center gap-2  hover:bg-blue-700 transition cursor-pointer">
+                  
+                  Set
+                </button>
       </div>
+
     </section>
   );
 };
@@ -140,6 +145,8 @@ const GalleryCard: React.FC<CardProps> = ({ item, span, checked, onClick }) => {
         )}
         <h6 className="text-lg font-semibold">{item.text}</h6>
       </div>
+
+      
     </div>
   );
 };
