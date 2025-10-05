@@ -133,22 +133,56 @@ const testimonials: Testimonial[] = [
 const Testimonials: React.FC = () => {
   const sliderRef = useRef<Slider | null>(null);
 
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 600,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   arrows: false, // we'll use custom arrows
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // };
+
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: false, // we'll use custom arrows
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-        },
+  dots: false,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: false, // we'll use custom arrows
+  responsive: [
+    {
+      breakpoint: 1024, // tablets and below
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  };
+    },
+    {
+      breakpoint: 768, // mobile landscape and below
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480, // small mobile screens
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false, // optional
+      },
+    },
+  ],
+};
+
 
   return (
     <section className="w-full px-4 md:px-0 py-20 bg-gray-50">
